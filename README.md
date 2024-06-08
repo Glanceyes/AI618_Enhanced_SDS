@@ -39,8 +39,8 @@ it, establishing a novel approach for efficient and coherent 3D editing
 ### Examples
 
 <div align="center">
-    <img src="assets/figure_02.png" alt="drawing" width="125em" height="200em"/>
-    <img src="assets/figure_02.gif" alt="drawing" width="125em" height="200em"/>
+    <img src="assets/figure_02.png" alt="drawing" style="height: 10em; width: auto;"/>
+    <img src="assets/figure_02.gif" alt="drawing" style="height: 10em; width: auto;"/>
     <div>
     "a photo of a person" → "Turn him into a clown"
     </div>
@@ -48,8 +48,8 @@ it, establishing a novel approach for efficient and coherent 3D editing
 
 <br/>
 <div align="center">
-    <img src="assets/figure_03.jpg" alt="drawing" widht="150em" height="200em"/>
-    <img src="assets/figure_03.gif" alt="drawing" widht="150em" height="200em"/>
+    <img src="assets/figure_03.jpg" alt="drawing" style="height: 10em; width: auto;"/>
+    <img src="assets/figure_03.gif" alt="drawing" style="height: 10em; width: auto;"/>
     <div>
     "a photo of a bear" → "Turn him into a grizzily bear"
     </div>
@@ -57,8 +57,8 @@ it, establishing a novel approach for efficient and coherent 3D editing
 
 <br/>
 <div align="center">
-    <img src="assets/figure_04.jpg" alt="drawing" widht="150em" height="200em"/>
-    <img src="assets/figure_04.gif" alt="drawing" widht="150em" height="200em"/>
+    <img src="assets/figure_04.jpg" alt="drawing" style="height: 10em; width: auto;"/>
+    <img src="assets/figure_04.gif" alt="drawing" style="height: 10em; width: auto;"/>
     <div>
     "a photo of a face" → "Give him a cowboy hat"
     </div>
