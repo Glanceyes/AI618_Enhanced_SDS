@@ -151,4 +151,6 @@ ns-train pds --data ../../data/yuseung/ --load-dir {PATH/TO/OUTPUT_DIR/nerfstudi
 
 [Posterior Diffusion Sampling](https://github.com/KAIST-Visual-AI-Group/PDS)
 
-[Instruct-Pix2Pix]()
+[DreamSampler](https://arxiv.org/abs/2403.11415)
+
+[Instruct-Pix2Pix](https://github.com/timothybrooks/instruct-pix2pix)
