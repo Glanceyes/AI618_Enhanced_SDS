@@ -135,18 +135,23 @@ cd {PATH/TO/REPO}/pds
 ns-train pds --data {DATASET_PATH} --load-dir {PATH/TO/OUTPUT_DIR/nerfstudio_models} --pipeline.pds.src_prompt {SRC_PROMPT} --pipeline.pds.tgt_prompt {TGT_PROMPT} --pipeline.pds.sd_pretrained_model_or_path {SD_PRETRAINED_MODEL_OR_PATH} --pipeline.pds.use_freeu {USE_FREEU} --pipeline.pds.use_pds {USE_PDS} --pipeline.pds.timestep_annealing {TIMESTEP_ANNEALING} --viewer.websocket-port {port_number}
 ```
 
+The VRAM requirements for PDS are around 40GB with a resolution of 512x512 images. To run the command within 24GB VRAM, you can use multiple GPUs by assigning a different device to the prior model with the following flag: `--pipeline.pds_device 'cuda:1'`. For more information on how to execute the code, please refer to the description in [PDS](https://github.com/KAIST-Visual-AI-Group/PDS/tree/main/3d_editing).
+
 Below is an example of running our proposed method with the provided dataset.
 
 
 ```bash
-ns-train pds --data {DATASET_PATH} --load-dir {PATH/TO/OUTPUT_DIR/nerfstudio_models} --pipeline.pds.src_prompt "a photo of a man" --pipeline.pds.tgt_prompt "a photo of a Batman" --pipeline.pds.sd_pretrained_model_or_path timbrooks/instruct-pix2pix --pipeline.pds.use_freeu True --pipeline.pds.use_pds False --pipeline.pds.timestep_annealing True --viewer.websocket-port {port_number}
+ns-train pds --data {DATASET_PATH} --load-dir {PATH/TO/OUTPUT_DIR/nerfstudio_models} --pipeline.pds.src_prompt "a photo of a man" --pipeline.pds.tgt_prompt "a photo of a Batman" --pipeline.pds.sd_pretrained_model_or_path timbrooks/instruct-pix2pix --pipeline.pds.use_freeu True --pipeline.pds.use_pds False --pipeline.pds.timestep_annealing True --pipeline.pds_device "cuda:1" --viewer.websocket-port {port_number}
 ```
 
 If you want to use only PDS for the model with stable-diffusion-v1-5, you can use the following command.
 
 ```bash
-ns-train pds --data {DATASET_PATH} --load-dir {PATH/TO/OUTPUT_DIR/nerfstudio_models} --pipeline.pds.src_prompt "a photo of a man" --pipeline.pds.tgt_prompt "a photo of a Batman" --pipeline.pds.sd_pretrained_model_or_path runwayml/stable-diffusion-v1-5 --pipeline.only_pds True --viewer.websocket-port {port_number}
+ns-train pds --data {DATASET_PATH} --load-dir {PATH/TO/OUTPUT_DIR/nerfstudio_models} --pipeline.pds.src_prompt "a photo of a man" --pipeline.pds.tgt_prompt "a photo of a Batman" --pipeline.pds.sd_pretrained_model_or_path runwayml/stable-diffusion-v1-5 --pipeline.only_pds True --pipeline.pds_device "cuda:1" --viewer.websocket-port {port_number} 
+
 ```
+
+
 
 
 ### Acknowledgement
