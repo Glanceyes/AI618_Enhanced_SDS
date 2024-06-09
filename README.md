@@ -14,32 +14,25 @@
 
 ### Introduction
 
-The field of 3D representation learning is evolving through the use of
-Score Distillation Sampling (SDS) to utilize large-scale pre-trained 2D models,
-addressing the scarcity of 3D data and enhancing modeling capabilities. Despite
-advancements, existing 3D editing approaches such as Posterior Distillation Sam-
-pling (PDS) often struggle with balancing identity preservation and editability, a
-challenge partly due to the coefficient divergence at lower timesteps. We introduce
-an effective formulation for 3D editing that leverages a pre-trained 2D model con-
-ditioned on the source image, significantly enhancing identity preservation while
-maintaining high fidelity in editing outputs. By incorporating a methodical decre-
-mental adjustment of timesteps and integrating advanced editing frameworks, our
-approach not only stabilizes the editing process but also substantially accelerates
-it, establishing a novel approach for efficient and coherent 3D editing
+The field of 3D representation learning is evolving through the use of Score Distillation Sampling (SDS) to utilize large-scale pre-trained 2D models,
+addressing the scarcity of 3D data and enhancing modeling capabilities. Despite advancements, existing 3D editing approaches such as Posterior Distillation Sampling (PDS) often struggle with balancing identity preservation and editability, a challenge partly due to the coefficient divergence at lower timesteps and random timestep sacmpling. We introduce an effective formulation for 3D editing that leverages a pre-trained 2D model conditioned on the source image, significantly enhancing identity preservation while maintaining high fidelity in editing outputs. By incorporating a methodical decremental adjustment of timesteps and integrating advanced editing frameworks, our approach not only stabilizes the editing process but also substantially accelerates it, establishing a novel approach for efficient and coherent 3D editing.
 
 <div align="center">
     <img src="assets/figure_01.png" alt="drawing" height="200em"/>
 </div>
 
-### Updates
+### Important Files
 
-- TBA
+- `3d_editing/pds_nerf/pipelines/pds_pipeline.py`
+- `pds.py`
+- `pds_unet.py`
+- `free_lunch_utils.py`
 
 
 ### Examples
 
 <div align="center">
-    <img src="assets/figure_02.png" alt="drawing" style="height: 10em; width: auto;"/>
+    <img src="assets/figure_02.png" alt="drawing" style="height: 10em; width: 10em;"/>
     <img src="assets/figure_02.gif" alt="drawing" style="height: 10em; width: auto;"/>
     <div>
     "a photo of a person" → "Turn him into a clown"
@@ -70,7 +63,7 @@ it, establishing a novel approach for efficient and coherent 3D editing
 
 ```bash
 # 1. Install dependencies
-cd GDS
+cd {PATH/TO/REPO}
 conda create -n gds python=3.9
 conda activate gds
 pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
